@@ -7,7 +7,8 @@ DAFT Berlin 08-2020
 
 ## Content
 - [Project Description](#project-description)
-- [Rules](#rules)
+- [Questions & Hypotheses](#questions--hypotheses)
+- [Dataset](#dataset)
 - [Workflow](#workflow)
 - [Organization](#organization)
 - [Links](#links)
