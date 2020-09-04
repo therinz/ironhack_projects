@@ -1,0 +1,1022 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20202.20.0721.1350                               -->
+<workbook source-build='2020.2.4 (20202.20.0721.1350)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Bird Strikes Test' inline='true' name='federated.0099wou0928tbp1ccdsvd0w14qst' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Bird Strikes Test' name='textscan.0570hzo0s00ica1cv4ag104y2o6c'>
+            <connection class='textscan' directory='C:/Users/Rinze/Documents/ironhack/git/ironhack_projects/4.-Tableau_presentation' filename='Bird Strikes Test.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='clean_birdstrike_data' name='textscan.06nhqm60qb7z73131nhkd0qzgr4l'>
+            <connection class='textscan' directory='C:/Users/Rinze/Documents/ironhack/git/ironhack_projects/4.-Tableau_presentation' filename='clean_birdstrike_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.06nhqm60qb7z73131nhkd0qzgr4l' name='clean_birdstrike_data.csv' table='[clean_birdstrike_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Airport: Name' ordinal='1' />
+            <column datatype='string' name='Altitude bin' ordinal='2' />
+            <column datatype='string' name='Aircraft: Make/Model' ordinal='3' />
+            <column datatype='string' name='Effect: Impact to flight' ordinal='4' />
+            <column datatype='datetime' name='FlightDate' ordinal='5' />
+            <column datatype='integer' name='Record ID' ordinal='6' />
+            <column datatype='string' name='Effect: Indicated Damage' ordinal='7' />
+            <column datatype='integer' name='Aircraft: Number of engines?' ordinal='8' />
+            <column datatype='string' name='Aircraft: Airline/Operator' ordinal='9' />
+            <column datatype='string' name='Origin State' ordinal='10' />
+            <column datatype='string' name='When: Phase of flight' ordinal='11' />
+            <column datatype='string' name='Wildlife: Size' ordinal='12' />
+            <column datatype='string' name='Wildlife: Species' ordinal='13' />
+            <column datatype='real' name='When: Time (HHMM)' ordinal='14' />
+            <column datatype='string' name='When: Time of day' ordinal='15' />
+            <column datatype='string' name='Pilot warned of birds or wildlife?' ordinal='16' />
+            <column datatype='integer' name='Cost: Aircraft time out of service (hours)' ordinal='17' />
+            <column datatype='integer' name='Cost: Other (inflation adj)' ordinal='18' />
+            <column datatype='integer' name='Cost: Repair (inflation adj)' ordinal='19' />
+            <column datatype='integer' name='Cost: Total $' ordinal='20' />
+            <column datatype='integer' name='Miles from airport' ordinal='21' />
+            <column datatype='integer' name='Feet above ground' ordinal='22' />
+            <column datatype='integer' name='Speed (IAS) in knots' ordinal='23' />
+            <column datatype='real' name='lat' ordinal='24' />
+            <column datatype='real' name='long' ordinal='25' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.06nhqm60qb7z73131nhkd0qzgr4l' name='clean_birdstrike_data.csv' table='[clean_birdstrike_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Airport: Name' ordinal='1' />
+            <column datatype='string' name='Altitude bin' ordinal='2' />
+            <column datatype='string' name='Aircraft: Make/Model' ordinal='3' />
+            <column datatype='string' name='Effect: Impact to flight' ordinal='4' />
+            <column datatype='datetime' name='FlightDate' ordinal='5' />
+            <column datatype='integer' name='Record ID' ordinal='6' />
+            <column datatype='string' name='Effect: Indicated Damage' ordinal='7' />
+            <column datatype='integer' name='Aircraft: Number of engines?' ordinal='8' />
+            <column datatype='string' name='Aircraft: Airline/Operator' ordinal='9' />
+            <column datatype='string' name='Origin State' ordinal='10' />
+            <column datatype='string' name='When: Phase of flight' ordinal='11' />
+            <column datatype='string' name='Wildlife: Size' ordinal='12' />
+            <column datatype='string' name='Wildlife: Species' ordinal='13' />
+            <column datatype='real' name='When: Time (HHMM)' ordinal='14' />
+            <column datatype='string' name='When: Time of day' ordinal='15' />
+            <column datatype='string' name='Pilot warned of birds or wildlife?' ordinal='16' />
+            <column datatype='integer' name='Cost: Aircraft time out of service (hours)' ordinal='17' />
+            <column datatype='integer' name='Cost: Other (inflation adj)' ordinal='18' />
+            <column datatype='integer' name='Cost: Repair (inflation adj)' ordinal='19' />
+            <column datatype='integer' name='Cost: Total $' ordinal='20' />
+            <column datatype='integer' name='Miles from airport' ordinal='21' />
+            <column datatype='integer' name='Feet above ground' ordinal='22' />
+            <column datatype='integer' name='Speed (IAS) in knots' ordinal='23' />
+            <column datatype='real' name='lat' ordinal='24' />
+            <column datatype='real' name='long' ordinal='25' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Airport: Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Airport: Name]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Airport: Name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Altitude bin</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Altitude bin]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Altitude bin</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aircraft: Make/Model</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Aircraft: Make/Model]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Aircraft: Make/Model</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Effect: Impact to flight</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Effect: Impact to flight]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Effect: Impact to flight</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FlightDate</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[FlightDate]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>FlightDate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Record ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Record ID]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Record ID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Effect: Indicated Damage</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Effect: Indicated Damage]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Effect: Indicated Damage</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aircraft: Number of engines?</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Aircraft: Number of engines?]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Aircraft: Number of engines?</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Aircraft: Airline/Operator</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Aircraft: Airline/Operator]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Aircraft: Airline/Operator</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Origin State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Origin State]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Origin State</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>When: Phase of flight</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[When: Phase of flight]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>When: Phase of flight</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wildlife: Size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wildlife: Size]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Wildlife: Size</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wildlife: Species</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Wildlife: Species]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Wildlife: Species</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>When: Time (HHMM)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[When: Time (HHMM)]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>When: Time (HHMM)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>When: Time of day</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[When: Time of day]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>When: Time of day</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Pilot warned of birds or wildlife?</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Pilot warned of birds or wildlife?]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Pilot warned of birds or wildlife?</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost: Aircraft time out of service (hours)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cost: Aircraft time out of service (hours)]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Cost: Aircraft time out of service (hours)</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost: Other (inflation adj)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cost: Other (inflation adj)]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Cost: Other (inflation adj)</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost: Repair (inflation adj)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cost: Repair (inflation adj)]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Cost: Repair (inflation adj)</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cost: Total $</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cost: Total $]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Cost: Total $</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Miles from airport</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Miles from airport]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Miles from airport</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Feet above ground</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Feet above ground]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Feet above ground</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Speed (IAS) in knots</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Speed (IAS) in knots]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>Speed (IAS) in knots</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[long]</local-name>
+            <parent-name>[clean_birdstrike_data.csv]</parent-name>
+            <remote-alias>long</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Effect: Impact to flight (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[Effect: Impact to flight]' new-bin='true'>
+          <bin default-name='true' value='&quot;Aborted Take-off, Engine Shut Down, Other and 1 more&quot;'>
+            <value>&quot;Aborted Take-off&quot;</value>
+            <value>&quot;Engine Shut Down&quot;</value>
+            <value>&quot;Other&quot;</value>
+            <value>&quot;Precautionary Landing&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[Effect: Impact to flight]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Origin State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[Wildlife: Species]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column-instance column='[Effect: Impact to flight]' derivation='None' name='[none:Effect: Impact to flight:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Wildlife: Species]' derivation='None' name='[none:Wildlife: Species:nk]' pivot='key' type='nominal' />
+      <group hidden='true' name='[Exclusions (Effect: Impact to flight,Effect: Impact to flight (group))]' name-style='unqualified' user:auto-column='exclude'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:Effect: Impact to flight:nk]' />
+          <groupfilter function='level-members' level='[Effect: Impact to flight (group)]' />
+        </groupfilter>
+      </group>
+      <group caption='Species' name='[Set 1]' name-style='unqualified' user:ui-builder='filter-group'>
+        <groupfilter count='14' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+          <groupfilter direction='DESC' expression='COUNT([Wildlife: Species])' function='order' user:ui-marker='order'>
+            <groupfilter function='level-members' level='[Wildlife: Species]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </groupfilter>
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Effect: Impact to flight:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aborted Take-off&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Precautionary Landing&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Engine Shut Down&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[Effect: Impact to flight (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aborted Take-off, Engine Shut Down, Other and 1 more&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Wildlife: Species:nk]' palette='tableau-10' type='palette'>
+            <map to='#17becf'>
+              <bucket>&quot;Sparrows&quot;</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>&quot;American kestrel&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;European starling&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;Red-tailed hawk&quot;</bucket>
+            </map>
+            <map to='#8c564b'>
+              <bucket>&quot;Killdeer&quot;</bucket>
+            </map>
+            <map to='#9467bd'>
+              <bucket>&quot;Horned lark&quot;</bucket>
+            </map>
+            <map to='#bcbd22'>
+              <bucket>&quot;Rock pigeon&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;Gulls&quot;</bucket>
+            </map>
+            <map to='#e377c2'>
+              <bucket>&quot;Mourning dove&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;Barn swallow&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='clean_birdstrike_data.csv' id='clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5'>
+            <properties context=''>
+              <relation connection='textscan.06nhqm60qb7z73131nhkd0qzgr4l' name='clean_birdstrike_data.csv' table='[clean_birdstrike_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='Airport: Name' ordinal='1' />
+                  <column datatype='string' name='Altitude bin' ordinal='2' />
+                  <column datatype='string' name='Aircraft: Make/Model' ordinal='3' />
+                  <column datatype='string' name='Effect: Impact to flight' ordinal='4' />
+                  <column datatype='datetime' name='FlightDate' ordinal='5' />
+                  <column datatype='integer' name='Record ID' ordinal='6' />
+                  <column datatype='string' name='Effect: Indicated Damage' ordinal='7' />
+                  <column datatype='integer' name='Aircraft: Number of engines?' ordinal='8' />
+                  <column datatype='string' name='Aircraft: Airline/Operator' ordinal='9' />
+                  <column datatype='string' name='Origin State' ordinal='10' />
+                  <column datatype='string' name='When: Phase of flight' ordinal='11' />
+                  <column datatype='string' name='Wildlife: Size' ordinal='12' />
+                  <column datatype='string' name='Wildlife: Species' ordinal='13' />
+                  <column datatype='real' name='When: Time (HHMM)' ordinal='14' />
+                  <column datatype='string' name='When: Time of day' ordinal='15' />
+                  <column datatype='string' name='Pilot warned of birds or wildlife?' ordinal='16' />
+                  <column datatype='integer' name='Cost: Aircraft time out of service (hours)' ordinal='17' />
+                  <column datatype='integer' name='Cost: Other (inflation adj)' ordinal='18' />
+                  <column datatype='integer' name='Cost: Repair (inflation adj)' ordinal='19' />
+                  <column datatype='integer' name='Cost: Total $' ordinal='20' />
+                  <column datatype='integer' name='Miles from airport' ordinal='21' />
+                  <column datatype='integer' name='Feet above ground' ordinal='22' />
+                  <column datatype='integer' name='Speed (IAS) in knots' ordinal='23' />
+                  <column datatype='real' name='lat' ordinal='24' />
+                  <column datatype='real' name='long' ordinal='25' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Airlines'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <_.fcp.ObjectModelTableType.false...column caption='clean_birdstrike_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Aircraft: Airline/Operator]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Aircraft: Airline/Operator]' derivation='None' name='[none:Aircraft: Airline/Operator:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Aircraft: Airline/Operator:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([Aircraft: Airline/Operator])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Aircraft: Airline/Operator:nk]' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Aircraft: Airline/Operator:nk]' member='&quot;BUSINESS&quot;' />
+                    <groupfilter function='member' level='[none:Aircraft: Airline/Operator:nk]' member='&quot;MILITARY&quot;' />
+                    <groupfilter function='member' level='[none:Aircraft: Airline/Operator:nk]' member='&quot;UNKNOWN&quot;' />
+                    <groupfilter function='member' level='[none:Aircraft: Airline/Operator:nk]' member='&quot;UNKNOWN COMMERCIAL&quot;' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Aircraft: Airline/Operator:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Aircraft: Airline/Operator:nk]</rows>
+        <cols>[federated.0099wou0928tbp1ccdsvd0w14qst].[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]</cols>
+      </table>
+      <simple-id uuid='{830E9685-1BBA-4DB7-BE3A-93D01F536933}' />
+    </worksheet>
+    <worksheet name='Impact to flight'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <column datatype='string' name='[Effect: Impact to flight (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[Effect: Impact to flight]' new-bin='true'>
+                <bin default-name='true' value='&quot;Aborted Take-off, Engine Shut Down, Other and 1 more&quot;'>
+                  <value>&quot;Aborted Take-off&quot;</value>
+                  <value>&quot;Engine Shut Down&quot;</value>
+                  <value>&quot;Other&quot;</value>
+                  <value>&quot;Precautionary Landing&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <_.fcp.ObjectModelTableType.false...column caption='clean_birdstrike_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Effect: Impact to flight]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Effect: Impact to flight]' derivation='None' name='[none:Effect: Impact to flight:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0099wou0928tbp1ccdsvd0w14qst].[Effect: Impact to flight (group)]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[Effect: Impact to flight (group)]' member='&quot;Aborted Take-off, Engine Shut Down, Other and 1 more&quot;' />
+              <groupfilter function='member' level='[Effect: Impact to flight (group)]' member='&quot;None&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0099wou0928tbp1ccdsvd0w14qst].[Effect: Impact to flight (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0099wou0928tbp1ccdsvd0w14qst].[Effect: Impact to flight (group)]' />
+              <size column='[federated.0099wou0928tbp1ccdsvd0w14qst].[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' />
+              <lod column='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Effect: Impact to flight:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F06AD2F3-1EEB-4B85-BC11-E31DA7933FB0}' />
+    </worksheet>
+    <worksheet name='Impact to flight breakdown'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <_.fcp.ObjectModelTableType.false...column caption='clean_birdstrike_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Effect: Impact to flight]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Effect: Impact to flight]' derivation='None' name='[none:Effect: Impact to flight:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Effect: Impact to flight:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Effect: Impact to flight:nk]' member='&quot;Aborted Take-off&quot;' />
+              <groupfilter function='member' level='[none:Effect: Impact to flight:nk]' member='&quot;Engine Shut Down&quot;' />
+              <groupfilter function='member' level='[none:Effect: Impact to flight:nk]' member='&quot;Other&quot;' />
+              <groupfilter function='member' level='[none:Effect: Impact to flight:nk]' member='&quot;Precautionary Landing&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Effect: Impact to flight:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Effect: Impact to flight:nk]</rows>
+        <cols>[federated.0099wou0928tbp1ccdsvd0w14qst].[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]</cols>
+      </table>
+      <simple-id uuid='{6EED4F45-C9AC-4EFF-BB42-7BC3542FE721}' />
+    </worksheet>
+    <worksheet name='Location'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <_.fcp.ObjectModelTableType.false...column caption='clean_birdstrike_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Airport: Name]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Airport: Name]' derivation='Attribute' name='[attr:Airport: Name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[lat]' derivation='None' name='[none:lat:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[long]' derivation='None' name='[none:long:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:long:qk]' field-type='quantitative' max='53196517.205929406' min='21470904.316482965' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:lat:qk]' field-type='quantitative' max='14289716.088553552' min='-9246422.0788572431' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0099wou0928tbp1ccdsvd0w14qst].[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' />
+              <lod column='[federated.0099wou0928tbp1ccdsvd0w14qst].[attr:Airport: Name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:lat:qk]</rows>
+        <cols>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:long:qk]</cols>
+      </table>
+      <simple-id uuid='{FB9F5AAF-8495-4193-8A59-34E3F8694855}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <column datatype='integer' name='[Feet above ground]' role='measure' type='quantitative' />
+            <column-instance column='[Feet above ground]' derivation='Sum' name='[sum:Feet above ground:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0099wou0928tbp1ccdsvd0w14qst].[sum:Feet above ground:qk]</cols>
+      </table>
+      <simple-id uuid='{2EAFE80B-C18D-409E-AE60-7152A4BE1650}' />
+    </worksheet>
+    <worksheet name='Top10 species'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Bird Strikes Test' name='federated.0099wou0928tbp1ccdsvd0w14qst' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0099wou0928tbp1ccdsvd0w14qst'>
+            <_.fcp.ObjectModelTableType.false...column caption='clean_birdstrike_data.csv' datatype='integer' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Wildlife: Species]' role='dimension' type='nominal' />
+            <_.fcp.ObjectModelTableType.true...column caption='clean_birdstrike_data.csv' datatype='table' name='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Wildlife: Species]' derivation='None' name='[none:Wildlife: Species:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0099wou0928tbp1ccdsvd0w14qst].[Set 1]' />
+          <filter class='categorical' column='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Wildlife: Species:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter from='&quot;Acadian flycatcher&quot;' function='range' level='[none:Wildlife: Species:nk]' to='&quot;Tyrant flycatchers&quot;' />
+              <groupfilter from='&quot;Upland sandpiper&quot;' function='range' level='[none:Wildlife: Species:nk]' to='&quot;Zebra dove&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Wildlife: Species:nk]</column>
+            <column>[federated.0099wou0928tbp1ccdsvd0w14qst].[Set 1]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Wildlife: Species:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0099wou0928tbp1ccdsvd0w14qst].[__tableau_internal_object_id__].[cnt:clean_birdstrike_data.csv_DA4F4A75A52D4D8AAB1BDAA5A9EDBCC5:qk]</rows>
+        <cols>[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Wildlife: Species:nk]</cols>
+      </table>
+      <simple-id uuid='{F222844F-4774-4AA6-9362-608D2D3E0D5A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' name='Impact to flight'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='marks' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0099wou0928tbp1ccdsvd0w14qst].[Effect: Impact to flight (group)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6508AD0F-8178-46A0-87E5-52C115F83EB6}' />
+    </window>
+    <window class='worksheet' name='Impact to flight breakdown'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='marks' />
+            <card type='filters' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B951CC12-F753-4358-98C6-6FE98257E4CD}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Location'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4C177788-6F60-4DB2-ADBA-899C37DF54C5}' />
+    </window>
+    <window class='worksheet' name='Top10 species'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0099wou0928tbp1ccdsvd0w14qst].[none:Wildlife: Species:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2A0D735F-3644-4839-AD7F-949036CE1C60}' />
+    </window>
+    <window class='worksheet' name='Airlines'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{969D6B4E-A9FB-43F2-B4AB-43CBE4F15F1F}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F8598470-9DF6-4F34-80EC-E8C5112C717A}' />
+    </window>
+  </windows>
+</workbook>
